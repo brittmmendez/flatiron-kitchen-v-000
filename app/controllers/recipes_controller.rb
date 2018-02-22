@@ -27,7 +27,7 @@ class RecipesController < ApplicationController
 
   def update
     @recipe.update(recipe_params)
- 
+
      if @recipe.save
       redirect_to @recipe
     else
