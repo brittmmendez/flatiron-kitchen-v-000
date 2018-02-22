@@ -30,7 +30,7 @@ class RecipesController < ApplicationController
      @recipe.update(recipe_params)
 
      if @recipe.save
-       redirect_to recipes_path
+       redirect_to @recipe
      else
        render :edit
      end
