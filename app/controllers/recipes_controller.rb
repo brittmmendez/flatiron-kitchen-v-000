@@ -27,20 +27,18 @@ class RecipesController < ApplicationController
 
   def update
     @recipe=Recipe.find(params[:id])
-   @recipe.update(recipe_params)
-
-   if @recipe.save
-     redirect_to @recipe
-   else
-     render :edit
-   end
-
-   end
+    @recipe.update(recipe_params)
+     if @recipe.save
+       redirect_to @recipe
+     else
+       render :edit
+     end
+  end
 
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, ingredient_ids:[], ingredients_attributes: [:name])
+    params.require(:recipe).permit(:name, ingredient_ids:[])
   end
 
 end
