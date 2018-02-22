@@ -35,7 +35,7 @@ class RecipesController < ApplicationController
      render :edit
    end
    end
-   
+
   private
 
   def recipe_params
