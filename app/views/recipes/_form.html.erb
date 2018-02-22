@@ -5,7 +5,7 @@
 
 <%= f.label "Ingredients:" %>
 
-<%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
+<%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %> <br>
 
 
 <%=f.submit %>
