@@ -3,7 +3,9 @@
 <%= f.label :name %>
 <%= f.text_field :name %>
 
-<% f.collection_check_boxes (:ingredient_ids, Ingredient.all)
+<% f.collection_check_boxes (:ingredient_ids, Ingredient.all, :id, :name) do |ingredient| %>
+  <p> <%= ingredient.name %>
+    <%= ingredient.check_box %> </p>
 
 <%=f.submit %>
 <% end %>
