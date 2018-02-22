@@ -5,8 +5,8 @@
 
 <% f.collection_check_boxes (:ingredient_ids, Ingredient.all, :id, :name) do |ingredient| %>
   <p> <%= ingredient.name %>
-    <%= ingredient.check_box %> </p>
-    <% end %>
+  <%= ingredient.check_box %> </p>
+<% end %>
 
 <%=f.submit %>
 <% end %>
