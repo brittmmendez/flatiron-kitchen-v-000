@@ -26,9 +26,9 @@ class RecipesController < ApplicationController
   end
 
   def update
-   @ingredient.update(ingredient_params)
-
-    if @ingredient.save
+    @recipe.update(recipe_params)
+ 
+     if @recipe.save
       redirect_to @recipe
     else
       render 'edit'
