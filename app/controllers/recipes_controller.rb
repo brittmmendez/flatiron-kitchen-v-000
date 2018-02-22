@@ -26,7 +26,7 @@ class RecipesController < ApplicationController
   end
 
   def update
-  
+
    end
 
   private
